@@ -1,0 +1,39 @@
+public class Main {
+
+    // Instance variable declaration
+    int instanceVar;
+
+    // Method to display the value of instance variable
+    public void Method() {
+        System.out.println("Instance variable: " + instanceVar);
+    }
+
+    public static void main(String[] args) {
+        // Creating an object (instance) of Main class
+        Main obj = new Main();
+
+        // Assigning a value of 50 to instanceVar
+        obj.instanceVar = 50;
+
+        // Calling the Method to display the value of instanceVar
+        obj.Method();
+
+        // Calling the Method again to display the value of instanceVar
+        obj.Method();
+
+        // Calling the Method again to display the value of instanceVar
+        obj.Method();
+
+        // Calling the Method again to display the value of instanceVar
+        obj.Method();
+
+        // Updating the value of instanceVar to 90
+        obj.instanceVar = 90;
+
+        // Calling the Method to display the updated value of instanceVar
+        obj.Method();
+
+        // Commented line mentioning the expected output
+        // Outputs: Instance variable: 50
+    }
+}
