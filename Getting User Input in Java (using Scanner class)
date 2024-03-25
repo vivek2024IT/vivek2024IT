@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class userInput {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Enter your Name:");
+        
+        // Read the user's input as a String
+        String name = s.nextLine();
+        
+        // Print the entered name
+        System.out.println("Hello, " + name + "!");
+        
+        // Close the scanner
+        s.close();
+    }
+}
