@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+        // Declare and initialize two integer variables
+        int a = 34;
+        int b = 6;
+
+        // Print the initial values of a and b
+        System.out.println("Before swapping:");
+        System.out.println("a is value = " + a);
+        System.out.println("b is value = " + b);
+
+        // Swapping logic using a temporary variable
+        int temp;
+        temp = a;  // Store the value of a in temp
+        a = b;     // Assign the value of b to a
+        b = temp;  // Assign the value of temp (which is the original value of a) to b
+
+        // Print the values of a and b after swapping
+        System.out.println("\nAfter swapping:");
+        System.out.println("a is value = " + a);
+        System.out.println("b is value = " + b);
+    }
+}
