@@ -1,0 +1,25 @@
+import java.util.Scanner;  // Import the Scanner class from java.util package
+
+public class Main {
+    public static void main(String[] args) {
+        int n;            // Declare variable to store user input
+        int fact = 1;     // Variable to store factorial, initialized to 1
+
+        Scanner s = new Scanner(System.in);  // Create a Scanner object for user input
+
+        // Prompt user to enter a number
+        System.out.print("Enter a number: ");
+        n = s.nextInt();  // Read user input as an integer
+
+        // Calculate factorial using a for loop
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;  // Multiply the current value of fact with i and update fact
+        }
+
+        // Print the factorial of the entered number
+        System.out.println("Factorial of " + n + " = " + fact);
+
+        // Close the Scanner object to free up resources
+        s.close();
+    }
+}
