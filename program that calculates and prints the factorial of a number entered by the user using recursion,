@@ -1,0 +1,24 @@
+import java.util.Scanner;  // Import the Scanner class from java.util package
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);  // Create a Scanner object for user input
+        
+        System.out.print("Enter a number: ");  // Prompt user to enter a number
+        int n = scanner.nextInt();  // Read the user's input as an integer and store it in n
+        
+        int fact = calculateFactorial(n);  // Call calculateFactorial method to compute the factorial
+        
+        System.out.println("Factorial of " + n + " = " + fact);  // Print the factorial of the entered number
+        
+        scanner.close();  // Close the Scanner object
+    }
+
+    public static int calculateFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;  // Base case: If n is 0 or 1, return 1
+        } else {
+            return n * calculateFactorial(n - 1);  // Recursive case: Multiply n with factorial of (n-1)
+        }
+    }
+}
