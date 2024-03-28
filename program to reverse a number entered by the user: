@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();  // Read the number from user input
+
+        int reversedNumber = 0;
+
+        while(number != 0) {
+            int digit = number % 10;  // Get the last digit of the number
+            reversedNumber = reversedNumber * 10 + digit;  // Append the digit to the reversed number
+            number = number/ 10;  // Remove the last digit from the number
+        }
+
+        System.out.println("Reversed Number: " + reversedNumber);
+
+        scanner.close();
+    }
+}
