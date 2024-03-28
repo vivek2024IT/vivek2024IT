@@ -1,16 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        int numberToCheck = 7;
+        int numberToCheck = 10;
         int temp = 0;
         
-        for (int i = 2; i < numberToCheck - 1; i++) {
+        for (int i = 2; i <=numberToCheck - 1; i++) {
+            if(numberToCheck %i== 0){
             temp = temp + 1;
+        }
         }
 
         if (temp == 0) {
-            System.out.println(numberToCheck + " is an Even Number");
+            System.out.println(numberToCheck + " is prime Number");
         } else {
-            System.out.println(numberToCheck + " is an Odd Number");
+            System.out.println(numberToCheck + " is Not prime Number");
         }
     }
 }
