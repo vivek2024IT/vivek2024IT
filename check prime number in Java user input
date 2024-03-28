@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int numberToCheck = s.nextInt();
+        int temp = 0;
+        
+        for (int i = 2; i <= numberToCheck - 1; i++) {
+            if (numberToCheck % i == 0) {
+                temp = temp + 1;
+            }
+        }
+
+        if (temp == 0 && numberToCheck > 1) {
+            System.out.println(numberToCheck + " is a prime Number");
+        } else {
+            System.out.println(numberToCheck + " is Not a prime Number");
+        }
+    }
+}
