@@ -1,0 +1,35 @@
+import java.util.HashSet;
+
+public class Hash {
+	public static void main(String[] args) {
+	    
+        HashSet<String> hs = new HashSet<>();
+        
+        hs.add("vivek");
+        hs.add("john");
+        hs.add("alice");
+        hs.add("alice");
+        hs.add("alicew");
+        
+        
+        // Print the HashSet
+        System.out.println("HashSet: " + hs);
+        
+        // Check if an element exists
+        boolean containsVivek = hs.contains("vivek");
+        System.out.println("HashSet contains 'vivek': " + containsVivek);
+        
+        // Remove an element
+        hs.remove("john");
+        System.out.println("HashSet after removing 'john': " + hs);
+        
+        // Size of the HashSet
+        System.out.println("Size of the HashSet: " + hs.size());
+        
+        // Iterate over the HashSet using enhanced for loop
+        for (String element : hs) {
+            System.out.println(element);
+        }
+    }
+}
+
