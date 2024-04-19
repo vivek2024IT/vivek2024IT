@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        // Array of strings
+        String[] a = {"vivek", "anish", "kishan"};
+
+        // Item to search for
+        String item = "kishan";
+        
+        // Variable to check if item is found
+        int temp = 0;
+
+        // Iterate through the array to find the item
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].equals(item)) {
+                System.out.println("Item is present at index " + i);
+                temp++;
+            }
+        }
+
+        // If item is not found
+        if (temp == 0) {
+            System.out.println("Item not found in this list");
+        }
+    }
+}
