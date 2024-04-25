@@ -1,0 +1,13 @@
+package threadnamedemo;
+
+public class ThreadNameDemo {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+        System.out.println("Current Thread Name: " + Thread.currentThread().getName());
+        
+        Thread.currentThread().setName("vivek");
+        
+        System.out.println("New Thread Name: " + Thread.currentThread().getName());
+    }
+}
