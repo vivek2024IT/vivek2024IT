@@ -1,0 +1,21 @@
+package threadnamedemo;
+
+public class Test extends Thread {
+    public void run() {
+        if(Thread.currentThread().isDaemon())
+            System.out.println("IS a demon Thread");
+        else {
+            System.out.println("Not Demon thread");
+        }
+        //System.out.println(Thread.currentThread().isDaemon());
+        System.out.println("Demon Thread");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main Thread");
+        Test t = new Test();
+
+        t.setDaemon(true); // Setting the thread as daemon
+        t.start(); // Starting the thread
+    }
+}
