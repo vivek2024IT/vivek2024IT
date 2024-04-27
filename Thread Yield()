@@ -1,0 +1,30 @@
+public class Main extends Thread {
+    public void run() {
+        // Code to be executed by the thread
+        for (int i = 0; i <= 5; i++) {
+            System.out.println(i + " " + Thread.currentThread().getName());
+        }
+        
+        // Yielding control from the current thread to other threads.
+        Thread.yield(); // If you want this thread to yield to other threads
+    }
+
+    public static void main(String[] args) {
+        // Creating an instance of the Main class
+        Main m = new Main();
+        
+        // Starting the thread
+        m.start();
+        
+        // Printing "Hello World"
+        System.out.println("Hello World");
+        
+        // Yielding control from the main thread to other threads.
+        Thread.yield(); // If you want the main method to stop and provide execution to other threads
+        
+        // Code executed by the main thread
+        for (int i = 0; i <= 5; i++) {
+            System.out.println(i + " " + Thread.currentThread().getName());
+        }
+    }
+}
